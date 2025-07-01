@@ -1,5 +1,3 @@
-# python_scripts/script_pdf_to_img.py
-
 from pdf2image import convert_from_path
 import os
 
@@ -9,7 +7,7 @@ PDF_SOURCE_DIR = os.path.join(SCRIPT_DIR, 'public', 'archivos', 'docs_normativid
 THUMBNAIL_OUTPUT_DIR = os.path.join(SCRIPT_DIR, 'public', 'img', 'normatividadmin')
 
 IMAGE_FORMAT = 'jpeg'  # 'png' o 'jpeg'
-IMAGE_QUALITY = 80    # Calidad de la imagen (0-100), solo para JPEG
+IMAGE_QUALITY = 80    # Quality img(0-100), solo para JPEG
 IMAGE_DPI = 100
 # ---------------------------------------------------------------------------------------
 
@@ -20,7 +18,6 @@ def generate_miniatura():
 
     if not os.path.exists(THUMBNAIL_OUTPUT_DIR):
         os.makedirs(THUMBNAIL_OUTPUT_DIR)
-        #print(f"Directorio de miniaturas creado: {THUMBNAIL_OUTPUT_DIR}")
 
     pdf_files = [f for f in os.listdir(PDF_SOURCE_DIR) if f.lower().endswith('.pdf')]
 
