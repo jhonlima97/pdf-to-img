@@ -36,7 +36,7 @@ def extract_lambayeque_ubigeos(input_file, output_file):
                 return
 
         if not lambayeque_data:
-            print("No se encontraron ubigeos de Lambayeque en el archivo de entrada.")
+            print("No se encontraron ubigeos de Lambayeque en el dataset.")
             return
 
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -48,11 +48,11 @@ def extract_lambayeque_ubigeos(input_file, output_file):
     except FileNotFoundError:
         print(f"❌ Error: El archivo '{input_file}' no fue encontrado.")
     except json.JSONDecodeError:
-        print(f"❌ Error: No se pudo decodificar el JSON de '{input_file}'. Por favor, revise el formato del archivo.")
+        print(f"❌ Error: No se pudo decodificar el JSON'. Por favor, revise el formato del archivo.")
     except Exception as e:
         print(f"❌ Ocurrió un error inesperado: {e}")
 
-# --- Ejecución del script ---
+# --- Rutas de los archivos json ---
 input_json_file = "public/archivos/igt_distrital_nacional.json"
 output_json_file = "public/archivos/igt_lambayeque_distrital.json"
 
